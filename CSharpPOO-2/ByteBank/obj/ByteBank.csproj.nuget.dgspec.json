@@ -1,34 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gsDoctor\\Desktop\\.net e c#\\CSharpPOO-2\\ByteBank\\ByteBank.csproj": {}
+    "C:\\Users\\wever\\Desktop\\.net e c#\\CSharp-and-.net\\CSharpPOO-2\\ByteBank\\ByteBank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gsDoctor\\Desktop\\.net e c#\\CSharpPOO-2\\ByteBank\\ByteBank.csproj": {
+    "C:\\Users\\wever\\Desktop\\.net e c#\\CSharp-and-.net\\CSharpPOO-2\\ByteBank\\ByteBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gsDoctor\\Desktop\\.net e c#\\CSharpPOO-2\\ByteBank\\ByteBank.csproj",
+        "projectUniqueName": "C:\\Users\\wever\\Desktop\\.net e c#\\CSharp-and-.net\\CSharpPOO-2\\ByteBank\\ByteBank.csproj",
         "projectName": "ByteBank",
-        "projectPath": "C:\\Users\\gsDoctor\\Desktop\\.net e c#\\CSharpPOO-2\\ByteBank\\ByteBank.csproj",
-        "packagesPath": "C:\\Users\\gsDoctor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gsDoctor\\Desktop\\.net e c#\\CSharpPOO-2\\ByteBank\\obj\\",
+        "projectPath": "C:\\Users\\wever\\Desktop\\.net e c#\\CSharp-and-.net\\CSharpPOO-2\\ByteBank\\ByteBank.csproj",
+        "packagesPath": "C:\\Users\\wever\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wever\\Desktop\\.net e c#\\CSharp-and-.net\\CSharpPOO-2\\ByteBank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gsDoctor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\wever\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -39,23 +41,19 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
+        "netcoreapp2.1": {
+          "dependencies": {
             "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
         }
       }
     }

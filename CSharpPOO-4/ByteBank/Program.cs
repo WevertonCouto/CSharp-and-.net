@@ -10,17 +10,20 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            Console.ReadLine();
-
             try
             {
                 int b = 0;
-                double a = (1 / b);
+                Dividir(1, b);
             }
-            catch (DivideByZeroException)
+            catch (Exception e)
             {
-                Console.WriteLine("Impossible");
+                Console.WriteLine(e.Message);
             }
+        }
+
+        public static double Dividir(int n1, int n2)
+        {
+            return n1 / n2;
         }
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\bin\Debug\netcoreapp3.0\FirstProject.exe
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\bin\Debug\netcoreapp3.0\FirstProject.deps.json
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\bin\Debug\netcoreapp3.0\FirstProject.runtimeconfig.json
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\bin\Debug\netcoreapp3.0\FirstProject.runtimeconfig.dev.json
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\bin\Debug\netcoreapp3.0\FirstProject.dll
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\bin\Debug\netcoreapp3.0\FirstProject.pdb
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\obj\Debug\netcoreapp3.0\FirstProject.csprojAssemblyReference.cache
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\obj\Debug\netcoreapp3.0\FirstProject.AssemblyInfoInputs.cache
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\obj\Debug\netcoreapp3.0\FirstProject.AssemblyInfo.cs
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\obj\Debug\netcoreapp3.0\FirstProject.dll
+C:\Users\gsDoctor\Desktop\.net e c#\CSharp\FirstProject\obj\Debug\netcoreapp3.0\FirstProject.pdb

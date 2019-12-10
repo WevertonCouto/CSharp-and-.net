@@ -12,12 +12,11 @@ namespace ByteBank
         {
             try
             {
-                int b = 0;
-                Dividir(1, b);
+                //int b = 0;
+                //Dividir(1, b);
             }
-            catch (Exception e)
+            catch (KeyNotFoundException e)
             {
-                Console.WriteLine(e.Message);
             }
         }
 

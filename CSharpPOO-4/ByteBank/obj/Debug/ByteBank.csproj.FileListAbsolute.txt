@@ -5,3 +5,10 @@ C:\Users\gsDoctor\Desktop\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBan
 C:\Users\gsDoctor\Desktop\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.csproj.CoreCompileInputs.cache
 C:\Users\gsDoctor\Desktop\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.exe
 C:\Users\gsDoctor\Desktop\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.pdb
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.csprojAssemblyReference.cache
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.csproj.CoreCompileInputs.cache
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.exe
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\obj\Debug\ByteBank.pdb
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\bin\Debug\ByteBank.exe.config
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\bin\Debug\ByteBank.exe
+C:\Users\wever\Desktop\.net e c#\CSharp-and-.net\CSharpPOO-4\ByteBank\bin\Debug\ByteBank.pdb

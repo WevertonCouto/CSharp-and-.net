@@ -12,11 +12,13 @@ namespace ByteBank
         {
             try
             {
-                //int b = 0;
-                //Dividir(1, b);
+                ContaCorrente conta = new ContaCorrente(123, 123);
+                conta.Depositar(500);
+                conta.Sacar(1000);
             }
-            catch (KeyNotFoundException e)
+            catch (OperacaoFinanceiraException e)
             {
+                Console.WriteLine(e.Message);
             }
         }
 

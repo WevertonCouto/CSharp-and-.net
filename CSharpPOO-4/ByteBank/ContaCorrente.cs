@@ -9,7 +9,8 @@ namespace ByteBank
         public static int TotalDeContasCriadas { get; private set; }
         private int Agencia { get; }
         public int Numero { get; }
-
+        public int ContadorSaquesNaoPermitidos { get; private set; }
+        public int ContadorTransferenciasNaoPermitidos { get; private set; }
 
 
         private double _saldo = 100;
@@ -40,20 +41,24 @@ namespace ByteBank
             }
             Agencia = agencia;
             Numero = numero;
-            TaxaOperacao = 30 / TotalDeContasCriadas;
             TotalDeContasCriadas++;
+            TaxaOperacao = 30 / TotalDeContasCriadas;
         }
 
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
+            if(valor < 0)
+            {
+                throw new System.ArgumentException("Valor inválido para o saque.");
+            }
             if (_saldo < valor)
             {
-                return false;
+                ContadorSaquesNaoPermitidos++;
+                throw new SaldoInsuficienteException("Saldo Insuficiente para o saque.");
             }
 
             _saldo -= valor;
-            return true;
         }
 
         public void Depositar(double valor)
@@ -62,16 +67,25 @@ namespace ByteBank
         }
 
 
-        public bool Transferir(double valor, ContaCorrente contaDestino)
+        public void Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (_saldo < valor)
+            if (valor < 0)
             {
-                return false;
+                throw new System.ArgumentException("Valor inválido para a transferência.");
             }
 
-            _saldo -= valor;
-            contaDestino.Depositar(valor);
-            return true;
+            try
+            {
+                this.Sacar(valor);
+                contaDestino.Depositar(valor);
+            }
+            catch (SaldoInsuficienteException e)
+            {
+                // InnerException
+                // Hide internal exception
+                ContadorTransferenciasNaoPermitidos++;
+                throw new OperacaoFinanceiraException("Exception", e);
+            }
         }
     }
 }

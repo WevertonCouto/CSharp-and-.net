@@ -13,22 +13,71 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            // Olá, meu nome é Guilherme e você pode entrar em contato comigo
+            // através do número 8457-4456!
+
+            // Meu nome é Guilherme, me ligue em 4784-4546
+
+            //  "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+            //  "[0-9][0-9][0-9][0-9][-][0-9][0-9][0-9][0-9]";
+            //  "[0-9]{4,5}[-][0-9]{4}";
+            //  "[0-9]{4,5}[-]{0,1}[0-9]{4}";
+            //  "[0-9]{4,5}-{0,1}[0-9]{4}";
             string padrao = "[0-9]{4,5}-?[0-9]{4}";
-            String textoDeTeste = "Meu nome é Weverton, ligue em 1111-3333";
+
+            // 879.546.120-20
+            // 879546120-20
+
+            string textoDeTeste = "idyufdgfugfjksdhf 99871--5456 sdjkfgsdjgsjgh sfsdjgsdjghsdfj";
+
             Match resultado = Regex.Match(textoDeTeste, padrao);
 
-            //string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
-            //ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);
+            Console.WriteLine(resultado.Value);
+            Console.ReadLine();
 
-            //string valor = extratorDeValores.GetValor("moedaDestino");
-            //Console.WriteLine("Valor de moedaDestino: " + valor);
 
-            //string valorMoedaOrigem = extratorDeValores.GetValor("moedaOrigem");
-            //Console.WriteLine("Valor de moedaOrigem: " + valorMoedaOrigem);
 
-            //Console.WriteLine(extratorDeValores.GetValor("VALOR"));
 
-            //Console.ReadLine();
+
+
+
+
+            string urlTeste = "https://www.bytebank.com/cambio";
+            int indiceByteBank = urlTeste.IndexOf("https://www.bytebank.com");
+
+
+
+
+            Console.WriteLine(urlTeste.StartsWith("https://www.bytebank.com"));
+            Console.WriteLine(urlTeste.EndsWith("cambio/"));
+
+
+            Console.WriteLine(urlTeste.Contains("ByteBank"));
+
+            
+            Console.ReadLine();
+
+            // pagina?argumentos
+            // 012345678
+
+
+
+            //moedaOrigem=real&moedaDestino=dolar
+            //          |
+            //  -------´
+
+            string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
+            ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);
+
+            string valor = extratorDeValores.GetValor("moedaDestino");
+            Console.WriteLine("Valor de moedaDestino: " + valor);
+
+            string valorMoedaOrigem = extratorDeValores.GetValor("moedaOrigem");
+            Console.WriteLine("Valor de moedaOrigem: " + valorMoedaOrigem);
+
+            Console.WriteLine(extratorDeValores.GetValor("VALOR"));
+
+            Console.ReadLine();
 
 
 
@@ -83,11 +132,6 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(String.IsNullOrEmpty(textoQualquer));
             Console.ReadLine();
 
-
-
-
-
-
             ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL("");
 
             string url = "pagina?moedaOrigem=real&moedaDestino=dolar";
@@ -99,9 +143,6 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(url);
             string argumentos = url.Substring(indiceInterrogacao + 1);
             Console.WriteLine(argumentos);
-
-
-            Console.ReadLine();
         }
     }
 

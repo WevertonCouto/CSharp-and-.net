@@ -8,13 +8,12 @@ namespace ByteBank.Modelos
 {
     public class ParceiroComercial : IAutenticavel
     {
-        private AutenticacaoHelper _autenticacao = new AutenticacaoHelper();
-
+        private AutenticacaoHelper _autenticacaoHelper = new AutenticacaoHelper();
         public string Senha { get; set; }
 
         public bool Autenticar(string senha)
         {
-            return _autenticacao.CompararSenhas(this.Senha, senha);
+            return _autenticacaoHelper.CompararSenhas(Senha, senha);
         }
     }
 }

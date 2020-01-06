@@ -12,6 +12,19 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+
+            var listContas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(100, 123123),
+                new ContaCorrente(120, 173123),
+                new ContaCorrente(110, 113123),
+                new ContaCorrente(105, 124123),
+            };
+
+            listContas.Sort();
+
+
+
             var list = new List<int>();
             list.Add(1);
             list.Add(10);

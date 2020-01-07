@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
+using ByteBank.SistemaAgencia.Comparadores;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -23,7 +24,18 @@ namespace ByteBank.SistemaAgencia
 
             listContas.Sort();
 
+            //listContas.Sort(new ComparadorContaCorrentePorAgencia());
 
+            //listContas.OrderBy(p => p.Agencia);
+            //listContas.OrderBy(p => {
+            //    if(p == null)
+            //    {
+            //        return int.MaxValue;
+            //    }
+            //    return p.Agencia;
+            //});
+
+            listContas.Where(p => p != null);
 
             var list = new List<int>();
             list.Add(1);

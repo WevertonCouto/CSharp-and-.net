@@ -8,29 +8,19 @@ using System.IO;
 
 namespace ByteBankImportacaoExportacao 
 { 
-    class Program 
+    partial class Program 
     { 
         static void Main(string[] args) 
         {
-            var file = "contas.txt";
-            var stream = new FileStream(file, FileMode.Open);
-
-            var buffer = new byte[1024];
-
-            var numeroDebytes = -1;
-            while(numeroDebytes != 0)
-            {
-                numeroDebytes = stream.Read(buffer, 0, 1014);
-                EscreverBuffer(buffer);
-            }
-        }
-
-        static void EscreverBuffer(byte[] buffer)
-        {
-            foreach (var b in buffer)
-            {
-                Console.Write(b);
-            }
+            var dir = "contas.txt";
+            using (var stream = new FileStream(dir, FileMode.Open))
+                using (var leitor = new StreamReader(stream))
+                {
+                    while (!leitor.EndOfStream)
+                    {
+                        Console.WriteLine(leitor.ReadLine());
+                    }
+                }
         }
     }
 } 

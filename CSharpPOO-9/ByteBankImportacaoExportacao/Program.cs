@@ -12,15 +12,7 @@ namespace ByteBankImportacaoExportacao
     { 
         static void Main(string[] args) 
         {
-            var dir = "contas.txt";
-            using (var stream = new FileStream(dir, FileMode.Open))
-                using (var leitor = new StreamReader(stream))
-                {
-                    while (!leitor.EndOfStream)
-                    {
-                        Console.WriteLine(leitor.ReadLine());
-                    }
-                }
+            CriarArquivo();
         }
     }
 } 

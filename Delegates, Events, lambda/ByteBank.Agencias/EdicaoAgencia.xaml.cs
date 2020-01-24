@@ -38,17 +38,39 @@ namespace ByteBank.Agencias
 
         public void AtualizarControles()
         {
-            btnOK.Click += new RoutedEventHandler(btnOk_Click);
-            btnCancelar.Click += new RoutedEventHandler(btnCancelar_Click);
+            RoutedEventHandler dialogResultTrue = (o, e) => DialogResult = true;
+            RoutedEventHandler dialogResultFalse = (o, e) => DialogResult = false;
+
+            btnOK.Click += new RoutedEventHandler(dialogResultTrue);
+            btnCancelar.Click += new RoutedEventHandler(dialogResultFalse);
 
             btnOK.Click += new RoutedEventHandler(Fechar);
             btnCancelar.Click += new RoutedEventHandler(Fechar);
+
+            txtNome.TextChanged += ContruirDelegateValidacaoCampoNullo(txtNome);
+0        }
+
+        //private TextChangedEventHandler ContruirDelegateValidacaoCampoNullo(TextBox txt)
+        //{
+        //    return (o, a) =>
+        //    {
+        //        if (String.IsNullOrEmpty(txt.Text)) txt.Background = new SolidColorBrush(Colors.Red);
+        //        else txt.Background = new SolidColorBrush(Colors.White);
+        //    };
+        //}
+
+        private void ValidarCamposNulo(object sender, EventArgs e)
+        {
+            var txt = (TextBox)sender;
+            if(String.IsNullOrEmpty(txt.Text)) txt.Background = new SolidColorBrush(Colors.Red);
+                else txt.Background = new SolidColorBrush(Colors.White);
         }
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e) => DialogResult = true;
-
-        private void btnOk_Click(object sender, RoutedEventArgs e) => DialogResult = false;
-
+        //private void TxtNome_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    if (String.IsNullOrEmpty(txtNome.Text)) txtNome.Background = new SolidColorBrush(Colors.Red);
+        //    else txtNome.Background = new SolidColorBrush(Colors.White);
+        //}
         private void Fechar(object sender, RoutedEventArgs e) => Close();
     }
 }

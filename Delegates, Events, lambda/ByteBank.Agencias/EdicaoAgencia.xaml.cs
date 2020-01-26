@@ -47,23 +47,29 @@ namespace ByteBank.Agencias
             btnOK.Click += new RoutedEventHandler(Fechar);
             btnCancelar.Click += new RoutedEventHandler(Fechar);
 
-            txtNome.TextChanged += ContruirDelegateValidacaoCampoNullo(txtNome);
-0        }
+            txtNome.Validacao += ContruirDelegateValidacaoCampoNullo(txtNome);
 
-        //private TextChangedEventHandler ContruirDelegateValidacaoCampoNullo(TextBox txt)
-        //{
-        //    return (o, a) =>
-        //    {
-        //        if (String.IsNullOrEmpty(txt.Text)) txt.Background = new SolidColorBrush(Colors.Red);
-        //        else txt.Background = new SolidColorBrush(Colors.White);
-        //    };
-        //}
+            txtNumero.TextChanged += ContruirDelegateValidacaoCampoNullo(txtNome);
+            txtNumero.Validacao += ValidarSomenteDigito;
+        }
 
-        private void ValidarCamposNulo(object sender, EventArgs e)
+        private bool ValidarSomenteDigito(string text)
         {
-            var txt = (TextBox)sender;
-            if(String.IsNullOrEmpty(txt.Text)) txt.Background = new SolidColorBrush(Colors.Red);
+            return text.All(char.IsDigit);
+        }
+
+        private TextChangedEventHandler ContruirDelegateValidacaoCampoNullo(TextBox txt)
+        {
+            return (o, a) =>
+            {
+                if (String.IsNullOrEmpty(txt.Text)) txt.Background = new SolidColorBrush(Colors.Red);
                 else txt.Background = new SolidColorBrush(Colors.White);
+            };
+        }
+
+        private bool ValidarCamposNulo(string text)
+        {
+            return !string.IsNullOrEmpty(text);
         }
 
         //private void TxtNome_TextChanged(object sender, TextChangedEventArgs e)
